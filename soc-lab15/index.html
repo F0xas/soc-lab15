@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SOC Center — Таби та модальне вікно</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="brand" href="index.html">
+                <svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true">
+                    <path d="M50 6 L88 20 V48 C88 72 70 88 50 95 C30 88 12 72 12 48 V20 Z"
+                          fill="#ffc107" stroke="#000" stroke-width="3" />
+                    <polyline points="32,50 45,63 69,36" fill="none" stroke="#000"
+                              stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                SOC Center
+            </a>
+            <button id="open-modal-btn" class="btn" type="button">Зв'язатися з нами</button>
+        </div>
+    </header>
+
+    <main class="wrap">
+
+        <section class="hero">
+            <h1>Security Operations Center</h1>
+            <p>Цілодобовий моніторинг, виявлення та реагування на інциденти інформаційної безпеки.</p>
+        </section>
+
+        <h2 class="section-title">Послуга: SIEM-моніторинг 24/7</h2>
+
+        <!-- ===== TABS ===== -->
+        <section class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="desc">Опис</button>
+                <button class="tab-btn" data-tab="chars">Характеристики</button>
+                <button class="tab-btn" data-tab="reviews">Відгуки</button>
+            </div>
+
+            <div class="tabs-body">
+                <div id="desc" class="tab-content active">
+                    <h3>Що входить у послугу</h3>
+                    <p>Команда SOC збирає та корелює події безпеки з серверів, мережевого обладнання та
+                    робочих станцій, налаштовує правила виявлення й обробляє алерти за затвердженими
+                    плейбуками. Про кожен інцидент ви отримуєте звіт із рекомендаціями.</p>
+                    <ul>
+                        <li>Підключення джерел логів і нормалізація подій</li>
+                        <li>Створення та тюнінг правил кореляції</li>
+                        <li>Первинний аналіз і класифікація алертів</li>
+                        <li>Ескалація критичних інцидентів</li>
+                    </ul>
+                </div>
+
+                <div id="chars" class="tab-content">
+                    <h3>Технічні характеристики</h3>
+                    <table>
+                        <tr><th>Режим роботи</th><td>24 години на добу, 7 днів на тиждень</td></tr>
+                        <tr><th>Реакція на критичний інцидент (P1)</th><td>до 15 хвилин</td></tr>
+                        <tr><th>Реакція на високий рівень (P2)</th><td>до 1 години</td></tr>
+                        <tr><th>Джерела подій</th><td>Сервери, міжмережеві екрани, EDR, хмарні сервіси</td></tr>
+                        <tr><th>Звітність</th><td>Щотижневий та щомісячний звіти</td></tr>
+                    </table>
+                </div>
+
+                <div id="reviews" class="tab-content">
+                    <h3>Відгуки клієнтів</h3>
+                    <blockquote>
+                        <p>Час виявлення інцидентів скоротився в рази, а звіти зрозумілі навіть керівництву.</p>
+                        <footer>— Олена К., ІТ-директор</footer>
+                    </blockquote>
+                    <blockquote>
+                        <p>Команда швидко локалізувала зараження робочої станції, жодних простоїв.</p>
+                        <footer>— Андрій М., системний адміністратор</footer>
+                    </blockquote>
+                    <blockquote>
+                        <p>Зручна ескалація: ми завжди знаємо, хто і що робить зараз.</p>
+                        <footer>— Ірина П., керівник відділу безпеки</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <!-- ===== /TABS ===== -->
+
+    </main>
+
+    <footer class="site-footer">
+        &copy; 2026 SOC Center. Лабораторна робота №15
+    </footer>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal-overlay" id="my-modal">
+        <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <span class="close-modal" title="Закрити">&times;</span>
+            <h2 id="modal-title">Залиште заявку</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Ваше ім'я" required><br><br>
+                <input type="tel" name="phone" placeholder="Ваш телефон" required><br><br>
+                <button type="submit" class="btn">Надіслати</button>
+            </form>
+            <p class="form-success" id="form-success" hidden>Дякуємо! Ми зателефонуємо вам найближчим часом.</p>
+        </div>
+    </div>
+    <!-- ===== /MODAL ===== -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
